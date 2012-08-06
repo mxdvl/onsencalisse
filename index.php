@@ -1,20 +1,27 @@
 <?php
 
-$affaires = array('1812', 'loi78', 'jo', '404');
+if($_SERVER['SERVER_NAME'] == "localhost")
+  $baseUrl = "/onsencalisse.com";
+else $baseUrl = "";
+
+$affaires = array('1812', 'loi78', 'jo');
 
 if(isset($_GET['q']))
-	$calisse = htmlspecialchars($_GET['q']);
-else $calisse = 1812;
+{ 
+  $calisse = htmlspecialchars($_GET['q']);
 
-if(!in_array($calisse, $affaires)) {
-	header("Location: /404");
-	exit;
+  if(!in_array($calisse, $affaires) && $calisse != "404") {
+    header("Location: ".$baseUrl."/404");
+    exit;
+  }
+
+  if($calisse == '404')
+    header("HTTP/1.0 404 Not Found");
+  else
+    header("HTTP/1.0 200 Ok");
 }
 
-if($calisse == '404')
-	header("HTTP/1.0 404 Not Found");
-else
-	header("HTTP/1.0 200 Ok");
+else header("Location: ".$baseUrl."/".$affaires[array_rand($affaires)] );
 
 ?><!DOCTYPE html>
 <html>

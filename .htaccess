@@ -306,7 +306,7 @@ FileETag None
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
   RewriteEngine On
-  RewriteBase /
+  RewriteBase /onsencalisse.com/
 </IfModule>
 
 
@@ -410,7 +410,7 @@ Options -MultiViews
 # URL Rewriting
 # ----------------------------------------------------------------------
 
-RewriteRule ^([a-zA-Z0-9]+)\/?$ /index.php?q=$1 [L]
+RewriteRule ^([a-zA-Z0-9]+)\/?$ index.php?q=$1 [L]
 
 
 
