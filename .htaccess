@@ -306,7 +306,7 @@ FileETag None
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
   RewriteEngine On
-  RewriteBase /onsencalisse.com/
+  RewriteBase /
 </IfModule>
 
 
@@ -410,7 +410,10 @@ Options -MultiViews
 # URL Rewriting
 # ----------------------------------------------------------------------
 
+RewriteCond %{HTTP_HOST} ^onsencalisse.com$ [NC] 
 RewriteRule ^([a-zA-Z0-9]+)\/?$ index.php?q=$1 [L]
+
+RewriteRule ^([a-zA-Z0-9]+)\/?$ /onsencalisse.com/index.php?q=$1 [L]
 
 
 
