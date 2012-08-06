@@ -25,7 +25,7 @@ if(isset($_GET['q']))
 else header("Location: ".$baseUrl."/".$affaires[array_rand($affaires)] );
 
 ?><!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
 <meta charset="utf-8">
 <title>on s'en câlisse</title>
@@ -45,6 +45,8 @@ else header("Location: ".$baseUrl."/".$affaires[array_rand($affaires)] );
 <link href='http://fonts.googleapis.com/css?family=Arvo:400' rel='stylesheet' type='text/css'>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<script src="js/libs/modernizr.custom.57181.js"></script>
 
 </head>
 <body style="top:0; background-position-y:0;" >
