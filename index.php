@@ -1,17 +1,18 @@
 <?php
 
-if($_SERVER['SERVER_NAME'] == "localhost")
-  $baseUrl = "/onsencalisse.com";
-else $baseUrl = "";
+if($_SERVER['SERVER_NAME'] == "onsencalisse.com")
+  $baseUrl = "";
+else $baseUrl = "/onsencalisse.com";
 
-$affaires = array('1812', 'loi78', 'jo');
+$affaires = array('1812', 'loi78', 'jeux');
 
 if(isset($_GET['q']))
 { 
   $calisse = htmlspecialchars($_GET['q']);
 
   if(!in_array($calisse, $affaires) && $calisse != "404") {
-    header("Location: ".$baseUrl."/404");
+    if($calisse == "jo") header("Location: ".$baseUrl."/jeux");
+    else header("Location: ".$baseUrl."/404");
     exit;
   }
 
