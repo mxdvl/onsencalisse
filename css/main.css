@@ -1,0 +1,124 @@
+body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+
+	position: absolute;
+	background: url("../img/lightpaperfibers.png") repeat;
+}
+
+/* ------ */
+
+#stampTool,
+#minui34 {
+	z-index: 1024;
+}
+
+.stamp,
+.shards {
+	z-index: 512;
+}
+
+img#calisse {
+	z-index: 256;
+}
+
+/* ------ */
+
+body,
+#calisse,
+.stamp,
+.stamp div,
+.shards,
+#stampTool {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* ------ */
+
+#calisse {
+	position: absolute;
+	display: block;
+
+	opacity: 0;
+
+	max-width: 100%;
+}
+
+.stamp {
+	box-sizing: border-box;
+
+	/*display: none;*/
+	position: absolute;
+	width: 248px;
+	height: 128px;
+
+	border: 4px solid #ff1d25;
+	border-radius: 15px;
+	/*background-color: #fff;*/
+
+	font-size: 48px;
+	font-family: 'Arvo', serif;
+	color: #ff1d25;
+}
+
+.stamp div {
+	position: absolute;
+}
+
+.stamp .on {
+	top: 0;
+	left: 16px;
+}
+
+.stamp .sen {
+	top: 0;
+	left: 120px;
+}
+
+.stamp .calisse {
+	top: 48px;
+	left: 16px;
+}
+
+.shards {
+	position: absolute;
+}
+
+#minui34 {
+	display: block;
+
+	position: fixed;
+	height: 6px;
+	width: 33px;
+
+	bottom: 10px;
+	right: 20px;
+}
+
+#stampTool {
+	position: fixed;
+	height: 32px;
+	width: 32px;
+
+	background: url('../img/stamp-icon.png') no-repeat 0px 0px;
+
+	bottom: 10px;
+	left: 20px;
+
+	border: 1px dashed #111;
+}
+
+#stampTool.active {
+	background: url('../img/stamp-icon.png') no-repeat 0px -32px;
+
+	border: 1px solid #ff1d25;
+}
+
+
+

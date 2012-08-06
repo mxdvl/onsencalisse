@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="248px"
+	 height="128px" viewBox="0 0 248 128" enable-background="new 0 0 248 128" xml:space="preserve">
+
+<g id="Layer_1">
+	<text transform="matrix(1 0 0 1 20 58)">
+		<tspan x="0" y="0" fill="#FF1D25" font-family="'Arvo'" font-size="48">ON </tspan>
+		<tspan x="98.412" y="0" fill="#FF1D25" font-family="'Arvo'" font-size="48">S’EN</tspan>
+		<tspan x="0" y="48" fill="#FF1D25" font-family="'Arvo'" font-size="48">CÂLISSE</tspan>
+	</text>
+	
+	<path fill="#FF1D25" style="display:none;" d="M230,4c7.72,0,14,6.28,14,14v92c0,7.72-6.28,14-14,14H18c-7.72,0-14-6.28-14-14V18c0-7.72,6.28-14,14-14
+		H230 M230,0H18C8.059,0,0,8.059,0,18v92c0,9.941,8.059,18,18,18h212c9.941,0,18-8.059,18-18V18C248,8.059,239.941,0,230,0L230,0z"
+		/>
+</g>
+</svg>
