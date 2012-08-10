@@ -4,7 +4,7 @@ body {
 	overflow: hidden;
 
 	position: absolute;
-	background: url("../img/lightpaperfibers.png") repeat;
+	background: #fcfbf9 url("../img/lightpaperfibers.png") repeat;
 }
 
 /* ------ */
