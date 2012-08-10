@@ -57,7 +57,9 @@ else header("Location: ".$baseUrl."/".$affaires[array_rand($affaires)] );
 
 	<div id="stampTool"></div>
 
-	<img id="calisse" src="de/<?php echo $calisse; ?>.png" />	
+  <?php $calisseSize = getimagesize("de/".$calisse.".png") ?>
+
+	<img id="calisse" src="de/<?php echo $calisse; ?>.png" data-width="<?php echo $calisseSize[0]; ?>" data-height="<?php echo $calisseSize[1]; ?>" />	
 
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="js/app.js"></script>
