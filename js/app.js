@@ -39,18 +39,30 @@ function addStamp(offsetLeft, offsetTop) {
 		'top' : offsetTop - windowHeight - 170,
 		'left' : offsetLeft,
 
-		'-webkit-transform'	: 'rotate(' + angle + 'deg)', /* Safari and Chrome */
-		   '-moz-transform'	: 'rotate(' + angle + 'deg)', /* Firefox */
-		    '-ms-transform'	: 'rotate(' + angle + 'deg)', /* IE 9 */
-		     '-o-transform'	: 'rotate(' + angle + 'deg)', /* Opera */
+		'-webkit-transform'	: 'rotate(' + angle + 'deg)', // Safari and Chrome
+		   '-moz-transform'	: 'rotate(' + angle + 'deg)', // Firefox
+		    '-ms-transform'	: 'rotate(' + angle + 'deg)', // IE 9
+		     '-o-transform'	: 'rotate(' + angle + 'deg)', // Opera
 		   		'transform'	: 'rotate(' + angle + 'deg)',
 	});
 
 	newStamp.appendTo($("body"));
 
 	newStamp.animate( { 'top' : offsetTop, 'opacity' : '1' }, 200, 'easeInCubic', function() {
-		setTimeout("bodyBounce()", 1);
-		newShard.css({ 'top' : offsetTop-36 , 'left' : offsetLeft-26 }).appendTo($("body"));
+		bodyBounce();
+		/*
+		newShard.css({
+			'-webkit-transform'	: 'rotate(' + angle + 'deg)', // Safari and Chrome
+			   '-moz-transform'	: 'rotate(' + angle + 'deg)', // Firefox
+			    '-ms-transform'	: 'rotate(' + angle + 'deg)', // IE 9
+			     '-o-transform'	: 'rotate(' + angle + 'deg)', // Opera
+			   		'transform'	: 'rotate(' + angle + 'deg)',
+		});
+		*/
+		newShard.css({
+			'top' : offsetTop - 36 + Math.floor(Math.random()*20) , // 52 margin
+			'left' : offsetLeft - 26 + Math.floor(Math.random()*20) // 72 margin
+		}).appendTo($("body"));
 	} );
 
 	// setTimeout("addStamp()", 10);
