@@ -32,12 +32,22 @@ function addImg() {
 	var imgHeight = img.height();
 	var imgWidth  = img.width();
 
+	// correct imgWidth and imgHeight if the image has not loaded properly.
 	if (imgWidth == 0 || imgHeight == 0) {
-		imgWidth = img.attr("data-height");
-		imgHeight = img.attr("data-width");
+		imgWidth = img.attr("data-width");
+		imgHeight = img.attr("data-height");
 
-		// console.log("width 0 happened. again.")
-	};
+		var ratio = imgWidth / imgHeight;
+
+		// correction for mobile screens with small width.
+		if(imgWidth > windowWidth) {
+			imgWidth = windowWidth;
+			imgHeight = imgWidth / ratio;
+		}
+
+		console.log("Image wasn't loaded in time. Using PHP-generated values for width/height.");
+	}
+	else console.log("Image loaded properly.");
 
 	img.offset({ top : (windowHeight - imgHeight) / 2 , left : (windowWidth - imgWidth) / 2 })
 
