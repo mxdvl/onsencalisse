@@ -3,6 +3,9 @@
 
 var stamping = false;
 
+var previousMouseX;
+var previousMouseY;
+
 $(function() {
 	windowSize();
 	setTimeout("addImg()", 200);
@@ -69,7 +72,21 @@ function addStamp(offsetLeft, offsetTop) {
 }
 
 $(window).mouseup( function(e) {
-	if(stamping) addStamp(e.clientX, e.clientY);
+	var currentMouseX = e.clientX;
+	var currentMouseY = e.clientY;
+	
+	// takes care of people hitting the mouse at the same spot.
+	if( e.clientX == previousMouseX && e.clientY == previousMouseY && stamping) {
+		addStamp(
+			currentMouseX - 20 + Math.floor(Math.random()*20),
+			currentMouseY - 20 + Math.floor(Math.random()*20)
+		);
+	}
+
+	else if(stamping) addStamp(currentMouseX, currentMouseY);
+
+	previousMouseX = e.clientX;
+	previousMouseY = e.clientY;
 });
 
 $("#stampTool").mouseup( function(e) {
