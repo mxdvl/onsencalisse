@@ -32,6 +32,7 @@ else header("Location: ".$baseUrl."/".$affaires[array_rand($affaires)] );
 <meta name="description" content="Un site pour les choses dont on se câlisse de.">
 <meta name="author" content="Madeck & Domachie">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
 
 <!-- OpenGraph -->
 <meta property="og:title" content="on s'en câlisse" /> 
