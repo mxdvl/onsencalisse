@@ -54,7 +54,7 @@ else header("Location: ".$baseUrl."/".$affaires[array_rand($affaires)] );
 
 	<!-- <div id="test"><?php if(isset($_GET['q'])) echo "true" ; else echo "false"; ?></div> -->
 
-	<img id="minui34" src="img/minui34.png" />
+	<a id="minui34" href="http://minui34.com/"><img src="img/minui34.png"></a>
 
 	<div id="stampTool"></div>
 
